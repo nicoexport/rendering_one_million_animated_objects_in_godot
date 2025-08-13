@@ -1,8 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://da84wuiftwfdn"]
+[gd_scene load_steps=2 format=3 uid="uid://da84wuiftwfdn"]
 
 [ext_resource type="Script" uid="uid://bjj5apo64yhky" path="res://scripts/controller.gd" id="1_o5qli"]
-
-[sub_resource type="BoxMesh" id="BoxMesh_o5qli"]
 
 [node name="Main" type="Node3D"]
 
@@ -11,6 +9,3 @@ script = ExtResource("1_o5qli")
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.876037, 0.482243, 0, -0.482243, 0.876037, 0, 4.04991, 6.10433)
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-mesh = SubResource("BoxMesh_o5qli")
