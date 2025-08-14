@@ -3,6 +3,8 @@ extends Node3D
 @export var grid_resolution: Vector2i = Vector2(20, 20) 
 @export var grid_spacing: float = 1.2
 
+@export var grid_instance_mesh: Mesh = BoxMesh.new()
+
 func _ready() -> void:
 	# offset so grid is centered at (0,0,0)
 	var offset_x := grid_resolution.x * grid_spacing * 0.5
@@ -12,7 +14,7 @@ func _ready() -> void:
 		for z in range(grid_resolution.y):
 			var instance = MeshInstance3D.new()
 			add_child(instance)
-			instance.mesh = BoxMesh.new()
+			instance.mesh = grid_instance_mesh
 
 			var pos_x = x * grid_spacing - offset_x
 			var pos_z = z * grid_spacing - offset_z
